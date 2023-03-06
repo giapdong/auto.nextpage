@@ -1,11 +1,6 @@
-console.log('Extension working!');
+console.log('Auto Next extension working!');
 
-async function autoNextPage() {
-
-	var { enable } = await chrome.storage.local.get('enable');
-	if (!enable) {
-		return;
-	}
+function next() {
 
 	console.log('Trigger next page');
 
@@ -16,6 +11,16 @@ async function autoNextPage() {
 	} else  {
 		// alert('ALL PAGE DONE');
 	}
+};
+
+async function autoNextPage() {
+
+	var { enable } = await chrome.storage.local.get('enable');
+	if (!enable) {
+		return;
+	}
+
+	// next();
 };
 
 
@@ -38,3 +43,10 @@ async function main() {
 };
 
 main();
+
+// Register manual next page by right-arrow
+document.addEventListener("keyup", (event) => {
+	if (event.keyCode == 39) {
+		next();
+	}
+});
