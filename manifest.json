@@ -1,0 +1,33 @@
+{
+	"name": "Auto Nextpage",
+	"description": "For find more result must click next page many times",
+	"version": "1.0",
+	"manifest_version": 3,
+	"permissions": ["storage", "activeTab", "scripting", "tabs"],
+	"action": {
+		"default_popup": "/popup/popup.html",
+		"default_icon": {
+			"16": "/images/reloader_16.png",
+			"32": "/images/reloader_32.png",
+			"48": "/images/reloader_48.png",
+			"128": "/images/reloader_128.png"
+		}
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"__comment": "https://developer.chrome.com/docs/extensions/mv3/content_scripts/",
+			"matches": ["https://*/*"],
+			"run_at": "document_end",
+			"js": ["content.js"]
+		}
+	],
+	"icons": {
+		"16": "/images/reloader_16.png",
+		"32": "/images/reloader_32.png",
+		"48": "/images/reloader_48.png",
+		"128": "/images/reloader_128.png"
+	}
+}
