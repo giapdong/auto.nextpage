@@ -7,17 +7,13 @@ let _enable = true;
 chrome.runtime.onInstalled.addListener(function() {
 	chrome.storage.local.set({ enable: true });
 
-	console.log('Default background color set to %cgreen', `color: ${color}`);
-});
-
-// Get current value of enable
-chrome.storage.local.get("enable", function({ enable }) {
-	_enable = enable;
+	console.log('Default enable status set to %ctrue', `color: ${color}`);
 });
 
 // Update enable state
 chrome.storage.onChanged.addListener(function (changes, areaName) {
 	_enable = changes.enable.newValue;
+	console.log('Update enable status: ', _enable ? 'true' : 'false');
 });
 
 // Register event for content.js get data from background

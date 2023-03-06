@@ -7,10 +7,10 @@
 	"action": {
 		"default_popup": "/popup/popup.html",
 		"default_icon": {
-			"16": "/images/reloader_16.png",
-			"32": "/images/reloader_32.png",
-			"48": "/images/reloader_48.png",
-			"128": "/images/reloader_128.png"
+			"16": "/images/autonext_16.png",
+			"32": "/images/autonext_32.png",
+			"48": "/images/autonext_48.png",
+			"128": "/images/autonext_128.png"
 		}
 	},
 	"background": {
@@ -25,9 +25,9 @@
 		}
 	],
 	"icons": {
-		"16": "/images/reloader_16.png",
-		"32": "/images/reloader_32.png",
-		"48": "/images/reloader_48.png",
-		"128": "/images/reloader_128.png"
+		"16": "/images/autonext_16.png",
+		"32": "/images/autonext_32.png",
+		"48": "/images/autonext_48.png",
+		"128": "/images/autonext_128.png"
 	}
 }
